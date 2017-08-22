@@ -1,0 +1,29 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'stockmarketweb/style.css' %}"/>
+
+<html>
+<head>
+    <title>Stock Market</title>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <h1>Stock Market</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2> <a href="{% url 'bsemain' %}">NASDAQ</a> </h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2> <a href="{% url 'whoarewe' %}">Who are we?</a> </h2>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

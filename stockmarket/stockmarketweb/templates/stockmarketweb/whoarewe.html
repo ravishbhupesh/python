@@ -1,0 +1,35 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'stockmarketweb/style.css' %}"/>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market</title>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <h1>Who are we?</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    This is a sample Stock Market application which will help me learn PYTHON and DJANGO.<br/>
+                    This application uses Google Finance API to fetch Stock Quotes.<br/>
+                    This should not be used for anything else than testing/learning purposes.<br/>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 align="center"> <a href="{% url 'index' %}">Home</a> </h2>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
