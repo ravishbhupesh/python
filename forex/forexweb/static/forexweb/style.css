@@ -3,12 +3,17 @@ body {
 }
 
 h1 {
-    color: blue;
+    color: navy;
     text-align="center";
 }
 
 h2 {
-    color: blue;
+    color: navy;
+    text-align="center";
+}
+
+h3 {
+    color: red;
     text-align="center";
 }
 

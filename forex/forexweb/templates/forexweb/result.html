@@ -1,0 +1,50 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'forexweb/style.css' %}"/>
+
+<html>
+<head>
+    <title>Forex</title>
+</head>
+<body>
+    <form action="convert" method="post">
+        {% csrf_token %}
+        <table align="center" >
+            <tr>
+                <td colspan="2">
+                    <h1>Currency Converter</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of Conversion
+                </td>
+                <td>
+                    {{ date }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>{{ from_curr }}</h3>
+                </td>
+                <td>
+                    <h3>{{ to_curr }}</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>{{ amount }}</h3>
+                </td>
+                <td>
+                    <h3>{{ result }}</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 align="center"> <a href="{% url 'index' %}">Home</a> </h2>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
