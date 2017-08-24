@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from.forms import IndexForm
 import requests, json
 
@@ -30,12 +29,10 @@ def convert(request):
     # fetch all rates against base currency
     json_resp_curr_dict = json_resp['rates']
     # fetch rate for trget currency
-    result = json_resp_curr_dict[to_curr]
+    result = json_resp_curr_dict[to_curr] * amount
 
-    return render(request, 'forexweb/result.html', {
-        'amount': amount,
-        'from_curr': from_curr,
-        'to_curr': to_curr,
+    return render(request, 'forexweb/index.html', {
+        'form' : form,
         'result': result,
         'date': date_of_conversion
     })

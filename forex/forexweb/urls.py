@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^convert$', views.convert, name='convert')
+    url(r'^convert$', views.convert, name='convert'),
     #url(r'^$', TemplateView.as_view(template_name="forexweb/index.html"), name='index'),
     #url(r'^basemain$', views.bsemain, name='bsemain'),
     #url(r'^whoarewe$', views.whoarewe, name='whoarewe'),
