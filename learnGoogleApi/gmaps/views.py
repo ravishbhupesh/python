@@ -10,6 +10,9 @@ booksService = build('books', 'v1', developerKey=api_key)
 
 # Create your views here.
 def index(request):
+    return render(request, 'gmaps/index.html')
+
+def books(request):
     androidBookRequest = booksService.volumes().list(source='public', q='android')
     response = androidBookRequest.execute()
     pprint.pprint(len(response['items']))
@@ -18,6 +21,4 @@ def index(request):
     for book in response['items']:
         bookTitle = book['volumeInfo']['title']
         books.append(bookTitle)
-    for b in books:
-        print(b)
-    return render(request, 'gmaps/index.html', {'books':books})
+    return render(request, 'gmaps/books.html', {'books':books})

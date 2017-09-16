@@ -7,20 +7,23 @@
 <body>
     <table align="center">
         <tr>
-            <td>
-                <h1>Google APIs</h1>
-            </td>
+            <th>
+                Books from Google API with Android in TITLE
+            </th>
         </tr>
+        {% for b in books %}
         <tr>
             <td>
-                <a href="/books" >Books</a>
+                {{ b }}
             </td>
         </tr>
+        {% empty %}
         <tr>
-            <td>
-                <a href="/books" >Books</a>
+            <td colspan="4">
+                No Books!
             </td>
         </tr>
+        {% endfor %}
     </table>
 </body>
 </html>
